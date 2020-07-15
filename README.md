@@ -8,7 +8,7 @@ Likely repoint will interact with this via some script.
 
 To get a signed tx (it won't send it).
 
-`node ./lib/opreturn.js PRIVKEY OPCODE MSG FEE RPC_URL SAFE`
+`$ node ./lib/opreturn.js PRIVKEY OPCODE MSG FEE RPC_URL SAFE`
 
 Here's an example.
 
@@ -18,7 +18,8 @@ node ./lib/opreturn.js \
 0x6d02 \
 'hello from datapay' \
 400 \
-https://api.mattercloud.net true
+https://api.mattercloud.net \
+true
 ```
 
 The example per docker workflow.
@@ -33,6 +34,13 @@ docker run --rm repoint_opreturn:0.1.0 node ./lib/opreturn.js \
 https://api.mattercloud.net \
 true
 ```
+
+**privkey:**
+**opcode:**
+**msg**
+**fee:** tx fee in Satoshis
+**rpc url:** public JSON-RPC endpoint
+**safe:** Set to true, otherwise it'll return a raw OP_RETURN (bad).
 
 ## Dev
 
