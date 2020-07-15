@@ -4,12 +4,41 @@ Datapay's javascript library is the easiest way for me to handle op-return trans
 
 Likely repoint will interact with this via some script.
 
+## Usage
+
+To get a signed tx (it won't send it).
+
+`node ./lib/opreturn.js PRIVKEY OPCODE MSG FEE RPC_URL SAFE`
+
+Here's an example.
+
+```
+node ./lib/opreturn.js \
+5JZ4RXH4MoXpaUQMcJHo8DxhZtkf5U5VnYd9zZH8BRKZuAbxZEw \
+0x6d02 \
+'hello from datapay' \
+400 \
+https://api.mattercloud.net true
+```
+
+The example per docker workflow.
+
+```
+docker build -t repoint_opreturn:0.1.0 .
+docker run --rm repoint_opreturn:0.1.0 node ./lib/opreturn.js \
+5JZ4RXH4MoXpaUQMcJHo8DxhZtkf5U5VnYd9zZH8BRKZuAbxZEw \
+0x6d02 \
+'hello from datapay' \
+400 \
+https://api.mattercloud.net \
+true
+```
+
 ## Dev
 
 Source files are copied into the image. No host dir is mounted to the container. Rebuild the docker image on each file modification you want ran. It's a bit akward but there is good reason for it.
 
 ### Testing
-
 
 Re-build and test.
 
