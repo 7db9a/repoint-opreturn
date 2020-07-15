@@ -2,7 +2,7 @@
 
 Datapay's javascript library is the easiest way for me to handle op-return transactions. The goal is to deprecate this once I get it going in rust.
 
-Likely repoint will interact with this via some script.
+Likely repoint will interact with this by calling a script.
 
 ## Usage
 
@@ -36,10 +36,15 @@ true
 ```
 
 **privkey:**
+
 **opcode:**
+
 **msg**
+
 **fee:** tx fee in Satoshis
+
 **rpc url:** public JSON-RPC endpoint
+
 **safe:** Set to true, otherwise it'll return a raw OP_RETURN (bad).
 
 ## Dev
