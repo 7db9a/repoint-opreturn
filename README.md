@@ -35,12 +35,6 @@ https://api.mattercloud.net \
 true
 ```
 
-**privkey:**
-
-**opcode:**
-
-**msg**
-
 **fee:** tx fee in Satoshis
 
 **rpc url:** public JSON-RPC endpoint
